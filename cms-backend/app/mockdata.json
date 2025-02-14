@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "Understanding Express.js",
+      "content": "Express.js is a minimal and flexible Node.js web application framework...",
+      "comments": [
+        {
+          "id": 1,
+          "user": "Jane Doe",
+          "content": "Great article!"
+        },
+        {
+          "id": 2,
+          "user": "John Smith",
+          "content": "Very informative, thanks!"
+        }
+      ],
+      "status": "published",
+      "author": "Alice Johnson"
+    },
+    {
+      "id": 2,
+      "title": "Node.js Basics",
+      "content": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine...",
+      "comments": [
+        {
+          "id": 1,
+          "user": "Sarah Lee",
+          "content": "Nice overview!"
+        }
+      ],
+      "status": "draft",
+      "author": "Bob Carter"
+    },
+    {
+      "id": 3,
+      "title": "React for Beginners",
+      "content": "React is a JavaScript library for building user interfaces...",
+      "comments": [],
+      "status": "published",
+      "author": "Charlie Evans"
+    }
+  ]
