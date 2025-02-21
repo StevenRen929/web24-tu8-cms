@@ -3,21 +3,17 @@ const router = new express.Router();
 const articleService = require("../../services/service");
 
 const articleController = require("../../controllers/article.controller");
-const authController = require("../../controllers/auth.controller")
+const authController = require("../../controllers/auth.controller");
+const authguard = require("../../middleware/authMiddleware")
 router.get(
   "/articles",
+  authguard.auth,
   articleController.getArticlesController
 );
 
-router.post(
-  "/articles",
-  articleController.createArticlesController
-);
+router.post("/articles", articleController.createArticlesController);
 
-router.get(
-  "/articles",
-  articleController.getArticlesController
-);
+router.get("/articles", articleController.getArticlesController);
 
 router.put(
   "/articles/:id",
@@ -31,8 +27,6 @@ router.delete(
   articleController.destory
 );
 
-
-
 router.get(
   "/articles/:id",
 
@@ -40,7 +34,6 @@ router.get(
 );
 module.exports = router;
 
-
-router.post("/register",authController.register);
-router.post("/login",authController.login);
-router.get("user/me",authController.showMe);
+router.post("/register", authController.register);
+router.post("/login", authController.login);
+router.get("user/me", authController.showMe);
